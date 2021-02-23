@@ -8,7 +8,7 @@
  
 
 int mydata1[DISTANCE * possibleHeights] = {
-#define REPEAT_COUNT (WIDTH * HEIGHT)
+#define REPEAT_COUNT (DISTANCE * possibleHeights)
 //NOTE: (a)/WIDTH is the h value
 #define REPEAT_FUNC(a) GETHEIGHT(20, 43, 50, ((a)%DISTANCE), ((a)/DISTANCE)),
 #include "lrepeat.h"

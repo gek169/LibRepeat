@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
 	#define REPEAT_FUNC(a) printf("\n%d",a);
-	#define REPEAT_COUNT (160 * 256)
+	#define REPEAT_COUNT (1<<18)
 	#include "lrepeat.h"
 }

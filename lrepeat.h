@@ -73,7 +73,60 @@
 #define CN1 (RCBIT(2)?(1<<2):0) + CN2
 #define CN0 (RCBIT(1)?(1<<1):0) + CN1
 
-//TODO expand this
+#if REPEAT_COUT < (1<<8)
+#undef CN8
+#define CN8 0
+#endif
+
+#if REPEAT_COUT < (1<<10)
+#undef CN10
+#define CN10 0
+#endif
+
+#if REPEAT_COUT < (1<<12)
+#undef CN12
+#define CN12 0
+#endif
+
+#if REPEAT_COUT < (1<<14)
+#undef CN14
+#define CN14 0
+#endif
+
+#if REPEAT_COUT < (1<<16)
+#undef CN16
+#define CN16 0
+#endif
+
+#if REPEAT_COUT < (1<<18)
+#undef CN18
+#define CN18 0
+#endif
+
+#if REPEAT_COUT < (1<<20)
+#undef CN20
+#define CN20 0
+#endif
+
+#if REPEAT_COUT < (1<<22)
+#undef CN22
+#define CN22 0
+#endif
+
+#if REPEAT_COUT < (1<<24)
+#undef CN24
+#define CN24 0
+#endif
+
+#if REPEAT_COUT < (1<<26)
+#undef CN26
+#define CN26 0
+#endif
+
+#if REPEAT_COUT < (1<<28)
+#undef CN28
+#define CN28 0
+#endif
 
 #if REPEAT_COUNT & (1<<30)
 REPEAT30_FUNC(0)

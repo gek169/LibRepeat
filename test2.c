@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define WIDTH 256
-#define HEIGHT 160
-#define REPEAT_FUNC(a) ((a%WIDTH) + (a/WIDTH)<<10),
+
+#define DISTANCE 500
+#define possibleHeights 256
+#define GETHEIGHT(cameraHeight, cameraHorizon, scaleHeight, dist, h)\
+ ((cameraHeight - h) / (dist+1) * scaleHeight + cameraHorizon)
+ 
+
+int mydata1[DISTANCE * possibleHeights] = {
 #define REPEAT_COUNT (WIDTH * HEIGHT)
-int mydata[WIDTH * HEIGHT] = {
+//NOTE: (a)/WIDTH is the h value
+#define REPEAT_FUNC(a) GETHEIGHT(20, 43, 50, ((a)%DISTANCE), ((a)/DISTANCE)),
 #include "lrepeat.h"
 };
 
 int main(){
-	for(int i = 0; i < WIDTH; i++)
-	for(int j = 0; j < HEIGHT; j++)
+	for(int j = 0; j < possibleHeights; j++)
+	for(int i = 0; i < DISTANCE; i++)
 	{
-		printf("\n %d, %d = %d", i, j, mydata[i + j * WIDTH]);
+		printf("\n %d, %d = %f", i, j, mydata1[i + j * DISTANCE]);
 	}
 }

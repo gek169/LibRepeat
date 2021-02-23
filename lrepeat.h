@@ -1,10 +1,4 @@
-
-//USAGE
-//#define REPEAT_FUNC(a) printf("%d",a);
-//#define REPEAT_COUNT 30
-//#include "lrepeat.h"
-
-#ifndef REPEAT_FUNC 
+#ifndef REPEAT_FUNC
 #error "No repeat function"
 #endif
 

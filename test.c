@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <float.h>
 int main(){
 	#define REPEAT_FUNC(a) printf("\n%d",a);
 	#define REPEAT_COUNT (160 * 256)

@@ -3,6 +3,7 @@
 
 #define ASSERT_SAME_TYPE(a, b)  ((&(a) == &(b)))
 
+//A has B of type C, testname D.
 #define HAS_ITEM(A,B,C,D) \
 static inline C* buildt_##A##B##D(){ \
   A t; \
@@ -39,5 +40,5 @@ typedef struct {
 
 FUNC_DUCKTYPE(float, somefunction, somefunction_is_duck, int, float);
 
-HAS_ITEM(quat, x, float, THISTHINGHASTOBEFLOAT)
-HAS_ITEM(purevirt, func1, void*,THISTHINGHASTOBEFUNC1);
+HAS_ITEM(quat, x, 			float, THISTHINGHASTOBEFLOAT)
+HAS_ITEM(purevirt, func1, 	void*, THISTHINGHASTOBEFUNC1);
